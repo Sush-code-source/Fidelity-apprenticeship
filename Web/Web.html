@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+</head>
+<body>
+    <h1>Simple Form</h1>
+    <h2>Form Fundmentals</h2>
+    <form onsubmit="return showAlert()" autocomplete="on">
+        <fieldset>
+            <legend>Customer Info</legend>
+        
+        <label for="Name">Name</label>
+        <input type="text" id="Name" placeholder="Enter your Name" name="Name" /><br />
+        <br>
+        <label for="telephone">telephone</label>
+        <input type="text" id="telephone" placeholder= "Pattern : 234-567-8910" name="telephone" /> <br />
+        <br>
+        <label for="email">email</label>
+        <input type="email" id="email" placeholder="Enter your email id"  name="email" /> <br />
+        <br>
+        
+        </fieldset>
+        <fieldset>
+        <legend>Books</legend>
+        <label for="Book">Book</label>
+        
+        <select id="Book" name="book" required >
+            <option value ="HTML5-Bruce Lawson and Remmy Sharp ">HTML5-Bruce Lawson and Remmy Sharp</option>
+            <option value="HTML5 - Up and Running - Mark 
+            Pilgrim">HTML5 - Up and Running - Mark 
+            Pilgrim</option>
+            <option value="Head First HTML5 Programming - Eric 
+            Freeman">Head First HTML5 Programming - Eric 
+            Freeman</option>
+            <option value="Mastering HTML, CSS and JavaScript -
+            Laura Lemay ">Mastering HTML, CSS and JavaScript -
+            Laura Lemay</option>
+            
+            </select >
+            <label for="quantity">Quantity Maximum 5 </label>
+        <input type="text" id="quantity" name="quantity" min="1" max="5" required />
+        </fieldset>
+        
+        <input type="submit" value="submit" >
+    
+
+
+    </form>
+
+    <script>
+        function showAlert(){
+            alert("your succesfully submited the book form");
+
+            return false;
+        }
+    </script>
+    
+</body>
+</html>

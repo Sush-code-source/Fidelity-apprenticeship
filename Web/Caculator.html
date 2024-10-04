@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>calculator</title>
+<style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #c7a7a7;
+            text-align: center;
+        }
+        .cal{
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #eedddd;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, green, blue, 1);
+        }
+        input[type="text"]{
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+ 
+        button{
+            padding: 10px 20px;
+            border: none;
+            background-color: rgb(189, 57, 112);
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #45a049;
+        }
+ 
+        .icon-btns{
+            display: flex;
+            justify-content: center;
+            gap:10px;
+            margin-top: 20px;
+        }
+        .icon-btns img{
+            width: 50px;
+            height: 50px;
+            cursor:pointer;
+        }
+</style>
+</head>
+<body>
+<div class="cal">
+<h1>calculator</h1>
+<img src="C:\Users\Administrator\Documents\simple calculator.jpg" alt="calculator Image" style="width: 15%; margin-bottom: 20px; height: 15%;">
+<input type="text" id="input1" placeholder="input1">
+<input type="text" id="input2" placeholder="input2">
+ 
+            <select id="operation">
+<option value="add">+</option>
+<option value="sub">-</option>
+<option value="mul">*</option>
+<option value="div">/</option>
+</select>
+ 
+            <button onclick="calculate()">calculate</button>
+ 
+            <div class="icon-btns">
+<img src="C:\Users\Administrator\Documents\Operations.png" alt="Icon 1">
+<img src="C:\Users\Administrator\Documents\Refresh.png" alt="Icon 2">
+</div>
+ 
+    </div>
+</body>
+</html>
