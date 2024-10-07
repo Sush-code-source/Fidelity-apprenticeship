@@ -74,5 +74,26 @@
 </div>
  
     </div>
+    <script>
+        function calculate(){
+            let input1=parseFloat(document.getElementById('input1').value);
+            let input2=parseFloat(document.getElementById('input2').value);
+ 
+            let operation=document.getElementById('operation').value;
+            let result;
+            if(operation==="add"){
+                result=input1+input2;
+            } else if(operation==="sub"){
+                result=input1-input2;
+            } else if(operation==="mul"){
+                result=input1*input2;
+            }else if(operation==="div"){
+                result=input1/input2;
+            }
+            alert("the result is: "+result);
+        }
+</script>
+has context menu
 </body>
 </html>
+
