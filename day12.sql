@@ -190,7 +190,11 @@ NOT NULL
 CHECK(LENGTH(contact)=10)
 );
 select*from supply
-
+Drop table supply
+create table supply(supplier_id numeric(5), supplier_name varchar(150), address varchar(150), city varchar(50),
+state varchar(15), country varchar(15), contact varchar(10));
+select*from supply;
+alter table supply add constraint chk_contact check(length(contact) = 10);
 
 
 
