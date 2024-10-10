@@ -139,3 +139,59 @@ insert into delivery_partner values('p001', 'zomato', 8),('p002', 'blink', 6),('
 insert into pizza values('a001', 1, 'p001','margherita', 'large', '2024-06-09', 500),
 ('a002', 2, 'p002','Pepperoni', 'small', '2023-08-09', 800),('a003', 3, 'p003', 'onion','large', '2024-08-09', 900);
 update pizza set amount = amount * 0.97 where pizza_type = 'large';
+
+--Create table with Foreign Key constraint
+CREATE TABLE salesman (
+salesman_id NUMERIC(5) 
+PRIMARY KEY,
+name VARCHAR(30),
+city VARCHAR(15),
+commission DECIMAL(5,2)
+);
+select*from salesman
+
+CREATE TABLE ord(
+ord_no NUMERIC(5) PRIMARY KEY,
+purch_amt DECIMAL(8,2),
+ord_date DATE,
+customer_id NUMERIC(5),
+salesman_id NUMERIC(5),
+FOREIGN KEY (salesman_id)
+REFERENCES salesman(salesman_id)
+);
+select*from ord
+
+INSERT INTO salesman(salesman_id, name, city, commission)
+VALUES(101, 'Deo', 'new york', 0.15),
+      (102, 'Smith', 'Los angeles', 0.20),
+	  (103, 'Johnson', 'chicago', 0.12);
+select*from salesman
+
+INSERT INTO ord(ord_no, purch_amt, ord_date, customer_id, salesman_id)
+VALUES (1001, 1500.00, '2023-10-01', 201, 101),
+       (1002, 2500.50, '2023-10-05', 202,102),
+	   (1003, 3000.75, '2023-10-08', 2023, 103);
+select*from ord
+
+--Alter Supplier table with Check Constraint
+CREATE TABLE Supply (
+supplier_id NUMERIC(5)
+PRIMARY KEY,
+supplier_name VARCHAR(150)
+NOT NULL,
+address VARCHAR(150)
+NOT NULL,
+city VARCHAR(50)
+NOT NULL,
+state VARCHAR(15),
+country VARCHAR(15),
+contact VARCHAR(10)
+NOT NULL
+CHECK(LENGTH(contact)=10)
+);
+select*from supply
+
+
+
+
+
