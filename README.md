@@ -6,3 +6,5 @@
 <img width="960" alt="ds1" src="https://github.com/user-attachments/assets/46edfb3f-d17c-4ddd-844b-77bb40099bd5">
 ![Screenshot 2024-10-07 170022](https://github.com/user-attachments/assets/81eeeeba-8595-49f1-9319-bfa60cae1d07)
 ![Screenshot 2024-10-07 170053](https://github.com/user-attachments/assets/e675098b-1788-4cb3-8d17-3e8ea504cb57)
+![Screenshot 2024-10-11 152749](https://github.com/user-attachments/assets/cc1709cd-2538-4053-ae32-d823c3a36ba7)
+![Screenshot 2024-10-11 155047](https://github.com/user-attachments/assets/6d8e5d52-4ff2-4c5b-af70-c1b942d45576)
