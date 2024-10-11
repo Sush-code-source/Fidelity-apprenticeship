@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dogs</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+ 
+        
+        nav {
+            background-color: #2c3e50;
+            padding: 10px;
+            text-align: center;
+        }
+ 
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+ 
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+ 
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+ 
+      
+        .about-section {
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+        }
+ 
+        .about-section h2 {
+            margin-bottom: 20px;
+        }
+ 
+       
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+ 
+        .about-grid img {
+            width: 100%;
+            border-radius: 10px;
+        }
+ 
+        .about-grid .text {
+            text-align: left;
+        }
+ 
+      
+        .product-section {
+            padding: 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        .product-section h2 {
+            margin-bottom: 20px;
+        }
+ 
+      
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+ 
+        .product-grid img {
+            width: 100%;
+            border-radius: 10px;
+        }
+ 
+        .product-grid .price {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 0 0 10px 10px;
+        }
+ 
+   
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+ 
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+ 
+  
+        .about-grid img {
+            animation: fadeIn 2s ease-in-out;
+        }
+ 
+        .product-grid img {
+            animation: slideIn 1s ease-in-out;
+        }
+ 
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Mobiles</a></li>
+        <li><a href="#">Contact</a></li>
+        </ul>
+        </nav>
+         
+           
+        <section class="about-section">
+        <h2>About Us</h2>
+        <div class="about-grid">
+        <img src="d.jpg" alt="dog Image 1">
+        <img src="d2.jpg" alt="dog Image 2">
+        <div class="text">
+        <h3>Loveable Dogs</h3>
+      
+        </div>
+        </div>
+        </section>
+         
+           
+        <section class="product-section">
+        
+        <div class="product-grid">
+        <div>
+        <img src="d3.jpg" alt="image 1">
+        <div class="price">golden retriever </div>
+        </div>
+        <div>
+        <img src="d4.jpg" alt="image 2">
+        <div class="price">golden retriever</div>
+        </div>
+        <div>
+        <img src="d5.jpg" alt="image 3">
+        <div class="price">dog friends</div>
+        </div>
+        <div>
+        <img src="d6.jpg" alt="image 4">
+        <div class="price">golden retriever</div>
+        </div>
+        <div>
+        <img src="d7.jpg" alt="image 5">
+        <div class="price">golden retriever</div>
+        </div>
+        <div>
+        <img src="d8.jpg" alt="image 6">
+        <div class="price">shih tzu</div>
+        </div>
+        <div>
+        <img src="d9.jpg" alt="image 7">
+        <div class="price">golden retriever</div>
+        </div>
+        <div>
+        <img src="d10.jpg" alt="image 8">
+        <div class="price">Pomeranian</div>
+        </div>
+        </div>
+        </section>
+         
+        </body>
+        </html>
