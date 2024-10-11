@@ -1,0 +1,84 @@
+--CREATE TABLE Title(
+--WORKER_REF_ID int,
+--WORKER_TITLE_VARCHAR(50),
+--AFFECTED_FROM DATE,
+--FOREIGN KEY
+--(WORKER_REF_ID)
+--REFERENCES Worker(WORKER_ID)
+--);
+CREATE  TABLE Worker(
+WORKER_ID INT PRIMARY KEY,
+FIRST_NAME VARCHAR(50),
+LAST_NAME VARCHAR(50),
+SALERY DECIMAL(10,2),
+JOINING_DATE DATE,
+DEPARTMENT VARCHAR(50)
+);
+
+
+INSERT INTO Worker(
+Worker_ID, FIRST_NAME, LAST_NAME, SALERY, JOINING_DATE, DEPARTMENT)
+VALUES
+(1, 'sush', 'Veena', 50000.00, '2020-01-15', 'HR'),
+(2, 'Smith', 'Jane', 60000.00, '2029-06-23', 'Finance'),
+(3, 'Brown', 'James', 70000.00, '2018-09-12', 'IT');
+select*from worker;
+
+CREATE TABLE Title(
+WORKER_REF_ID INT,
+WORKER_TITLE VARCHAR(50),
+AFFECTED_FROM DATE,
+FOREIGN KEY
+(WORKER_REF_ID)
+REFERENCES Worker(WORKER_ID)
+);
+
+INSERT INTO Title(
+WORKER_REF_ID, WORKER_TITLE, AFFECTED_FROM)
+VALUES
+(1, 'Manager', '2021-03-01'),
+(2, 'Accountant', '2020-08-15'),
+(3, 'Developer', '2019-11-05');
+select*from Title;
+
+CREATE TABLE Bonus (
+WORKER_REF_ID INT,
+BONUS_AMOUNT DECIMAL(10,2),
+BONUS_DATE DATE,
+FOREIGN KEY (WORKER_REF_ID)
+REFERENCES Worker(WORKER_ID)
+);
+INSERT INTO Bonus
+(WORKER_REF_ID, BONUS_AMOUNT, BONUS_DATE)
+VALUES
+(1,5000.0, '2021-12-25'),
+(2,3000.0, '2020-12-15'),
+(3,4000.0, '2021-01-10');
+select*from Bonus;
+
+--query to display the firstname, salary and title for all workers
+SELECT W.FIRST_NAME, W.SALERY, T.WORKER_TITLE
+FROM Worker W
+JOIN Title T ON W.WORKER_ID=T.WORKER_REF_ID;
+
+--2
+CREATE OR REPLACE FUNCTION
+get_worker_count_by_nth_highest_salary(n INT)
+RETURNS INTEGER AS $$ DECLARE
+nth_highest_salery DECIMAL;
+worker_count INTEGER;
+BEGIN
+SELECT DISTINCT salery
+INTO nth_highest_salery
+FROM worker
+ORDER BY salery DESC LIMIT 1 OFFSET n-1;
+SELECT COUNT(*)
+INTO worker_count
+FROM worker
+WHERE salery=nth_highest_salery;
+RETURN worker_count;
+END;
+$$ LANGUAGE plpgsql;
+
+SELECT get_worker_count_by_nth_highest_salary(2);
+
